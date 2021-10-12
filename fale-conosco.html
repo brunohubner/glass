@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Tudo sobre o Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <script type="text/javascript" src="_javascript/funcoes.js"></script>
+    <script type="text/javascript">
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('iQtd').value);
+            var tot = qtd * 1500;
+            document.getElementById('iPre').value = tot;
+        }
+    </script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            <img id="icone" src="_imagens/contato.png" />
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('contato')"><a href="index.html"
+                            target="_self">Home</a></li>
+                    <li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('contato')"><a href="specs.html"
+                            target="_self">Especificações</a></li>
+                    <li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('contato')"><a href="fotos.html"
+                            target="_self">Fotos</a></li>
+                    <li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('contato')"><a href="multimidia.html"
+                            target="_self">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('contato')" onmouseout="mudaFoto('contato')"><a href="fale-conosco.html"
+                            target="_self">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    </hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Bruno Hubner</h2>
+                    <h3 id="att">Atualizado em 30/03/2014</h3>
+                    </hgroup>
+                </header>
+                <form id="iContato" method="post" action="mailto:contatobrunohubner@gmail.com" oninput="calc_total()">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="iNome">Nome:</label><input type="text" name="nNome" id="iNome" size="20"
+                                maxlength="40" placeholder="Nome Completo"></p>
+                        <p><label for="iSenha">Senha:</label><input type="password" name="nSenha" id="iSenha" size="12"
+                                maxlength="12" minlength="8" placeholder="6 a 12 dígitos"></p>
+                        <p><label for="iEmail">E-mail:</label><input type="email" name="nEmail" id="iEmail" size="20"
+                                maxlength="40" placeholder="seunome@email.com"></p>
+                        <fieldset>
+                            <legend>Sexo:</legend>
+                            <input type="radio" name="nSexo" id="iMasc"><label for="iMasc">Masculino</label><br />
+                            <input type="radio" name="nSexo" id="iFem"><label for="iFem">Feminino</label><br />
+                            <input type="radio" name="nSexo" id="iNull"><label for="iNull">Prefiro não dizer</label>
+                            <p>Data de Nascimento:<input type="date" name="nNasc" id="iNasc"></p>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="iRua">Logradouro:<input type="text=" name="nRua" id="iRua" size="15"
+                                    maxlength="80" minlength="3" placeholder="Rua, Av, Trav, ..."></label></p>
+                        <p><label for="iNum">Numero:<input type="number" name="nNum" id="iNum" min="0"
+                                    max="9999"></label></p>
+                        <p><label for="iEst">Estado:</label>
+                            <select id="iEst" name="nEst">
+                                <option value="0" selected=""></option>
+                                <optgroup label="Norte">
+                                    <option value="ac">Acre</option>
+                                    <option value="al">Alagoas</option>
+                                    <option value="ap">Amapa</option>
+                                    <option value="am">Amazonas</option>
+                                    <option value="pa">Pará</option>
+                                    <option value="ro">Rondônia</option>
+                                    <option value="rr">Roraima</option>
+                                    <option value="to">Tocantins</option>
+                                </optgroup>
+                                <optgroup label="Nordeste">
+                                    <option value="ba">Bahia</option>
+                                    <option value="ce">Ceará</option>
+                                    <option value="ma">Maranhão</option>
+                                    <option value="pb">Paraíba</option>
+                                    <option value="pe">Pernambuco</option>
+                                    <option value="pi">Piauí</option>
+                                    <option value="rn">Rio Grande do Norte</option>
+                                    <option value="se">Sergipe</option>
+                                </optgroup>
+                                <optgroup label="Centro-Oeste">
+                                    <option value="df">Distrito Federal</option>
+                                    <option value="go">Goiás</option>
+                                    <option value="mt">Mato Grosso</option>
+                                    <option value="ms">Mato Grosso do Sul</option>
+                                </optgroup>
+                                <optgroup label="Sudeste">
+                                    <option value="es">Espirito Santo</option>
+                                    <option value="mg">Minas Gerais</option>
+                                    <option value="rj">Rio de Janeiro</option>
+                                    <option value="sp">São Paulo</option>
+                                </optgroup>
+                                <optgroup label="Sul">
+                                    <option value="pr">Paraná</option>
+                                    <option value="rs">Rio Grande do Sul</option>
+                                    <option value="sc">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p><label for="iCid">Cidade:<input type="text" name="nCid" id="iCid" size="20" maxlength="40"
+                                    placeholder="Seu Município" list="cidades"></label></p>
+                        <datalist id="cidades">
+                            <option value="Mutum"></option>
+                            <option value="Manhuaçú"></option>
+                            <option value="Lajinha"></option>
+                            <option value="Chalé"></option>
+                            <option value="Ibatiba"></option>
+                            <option value="Pocrane"></option>
+                            <option value="Reduto"></option>
+                            <option value="Durandé"></option>
+                            <option value="Simonésia"></option>
+                            <option value="Afonso Cláudio"></option>
+                            <option value="Brejetuba"></option>
+                            <option value="João Molevade"></option>
+                            <option value="Realeza"></option>
+                            <option value="Martins Soares"></option>
+                            <option value="Aimorés"></option>
+                            <option value="Ipanema"></option>
+                            <option value="Conseição de Ipanema"></option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        <p><label for="iUrg">Grau de Urgência:</label>
+                            Min.<input type="range" name="nUrg" id="iUrg" min="0" max="5" step="1">Max.
+                        </p>
+                        <p><label for="iMsg">Mensagem:</label>
+                            <textarea name="nMsg" id="iMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem."
+                                maxlength="1000"></textarea>
+                        </p>
+                    </fieldset>
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" id="iAdq" name="nAdq" checked>
+                            <label for="iAdq">Gostaria de adquirir um Google Glass quando disponível</label>
+                        </p>
+                        <input type="color" id="iCor" name="nCor" value="#ffff00">
+                        <p><label for="iCor">Cor:</label></p>
+                        <p><label for="iQtd">Quantidade:</label><input type="number" id="iQtd" name="nQtd" value="1"
+                                min="0" max="10"></p>
+                        <p><label for="iPre">Preço Total: R$</label><input type="text" name="nPre" id="iPre"
+                                placeholder="Total a pagar" readonly></p>
+                    </fieldset>
+                    <input type="image" src="_imagens/botao-enviar.png" id="iBut" name="nBut">
+                </form>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright &copy; 2014 - por Bruno Hubner
+                </br><a href="https://www.github.com/brunohubner" target="_blank">GitHub</a> <span>|</span>
+                <a href="https://www.linkedin.com/in/brunohubner01" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
